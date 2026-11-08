@@ -4,36 +4,79 @@
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-purple.svg)](https://php.net)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-green.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 
-A premier, high-performance, dark-themed **WordPress Group Portfolio Theme** built specifically for a team of four software developers and designers. 
+A premier, high-performance, dark-themed **WordPress Group Portfolio Theme** built specifically for a 4-member BSIT Cloud Computing engineering collective covering Software Programming, Data Analysis, Agile Project Management, and Technical Writing.
 
 Engineered with a modern software agency aesthetic, the theme features responsive glassmorphism, native custom post types for team members and projects, and secure AJAX contact forms with WordPress security nonces.
 
 ---
 
-## 🚀 Live Preview (Zero Setup Needed)
-To immediately view the responsive design and interactive functionality without waiting for WordPress or local servers:
-* Double-click **`preview.html`** in this folder to open it in any web browser.
+## 🌐 Live Production Deployment
+* **Live Website URL:** [https://quadro.gvaluminumandglassworks.com/](https://quadro.gvaluminumandglassworks.com/)
+* **Official GitHub Repository:** [https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio](https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio)
+* **Instant HTML Preview:** Double-click **`preview.html`** in this folder to test responsiveness offline.
 
 ---
 
-## 👥 The 4 Team Member Roles (Placeholder Config)
+## 👥 The 4 Team Member Roles & Profiles
 
-The theme natively accommodates the four distinct developer/designer roles:
+The theme natively accommodates the four distinct BSIT engineering roles:
 
-1. **Member One — Frontend Developer**
-   * *Core Stack:* HTML5, CSS3, JavaScript (ES6+), WordPress, Tailwind CSS, React
-   * *Specialization:* Responsive layouts, micro-interactions, accessibility, 60fps rendering speeds.
-2. **Member Two — Backend Developer**
-   * *Core Stack:* PHP 8.x, MySQL, WordPress APIs, RESTful Endpoints, Docker
-   * *Specialization:* Scalable architectures, query optimization, endpoint security, database normalization.
-3. **Member Three — UI/UX Designer**
-   * *Core Stack:* Figma, UI Design, CSS Tokens, Prototyping, Wireframing
-   * *Specialization:* Human-centered design, WCAG 2.1 AA accessible interfaces, design systems.
-4. **Member Four — Full-Stack Developer**
-   * *Core Stack:* PHP, JavaScript, MySQL, WordPress, Node.js, GraphQL
-   * *Specialization:* End-to-end integration, full software lifecycle, cloud deployment.
+1. **Niel Kenneth De jesus — Data Analyst**
+   * *Core Stack:* Data Analysis, Python, SQL, Statistics, Excel, Tableau, PowerBI
+   * *Specialization:* Quantitative telemetry analysis, statistical forecasting, database normalization, predictive data modeling, and interactive executive KPI dashboards.
+   * *Direct Email:* `nielkenneth.dejesus@gmail.com`
 
-> **Note:** All member details, roles, skills, profile photos, and social links are **100% editable** via the WordPress Admin dashboard under **Team Members**.
+2. **Ariel Caharian — Project Manager**
+   * *Core Stack:* Agile/Scrum, Project Roadmapping, Resource Allocation, JIRA, Confluence, QA Leadership
+   * *Specialization:* Cross-functional sprint governance, milestone delivery tracking, velocity optimization, risk matrix auditing, and quality assurance benchmarks.
+   * *Direct Email:* `ariel.caharian@gmail.com`
+
+3. **Lorence Mar Bigtasin — Technical Writer**
+   * *Core Stack:* Technical Documentation, REST API Specifications, OpenAPI/Swagger, Markdown, System Architecture Writing, SOP Manuals
+   * *Specialization:* Comprehensive developer API references, software architecture blueprints, standard operating procedures (SOPs), and end-user onboarding manuals.
+   * *Direct Email:* `lorence.bigtasin@gmail.com`
+
+4. **Mike Christopher Mansilao — PROGRAMMER**
+   * *Core Stack:* PHP 8.x, JavaScript (ES6+), MySQL, WordPress Theme & Core APIs, Python, REST APIs
+   * *Specialization:* Custom WordPress theme engineering, object-oriented PHP backend logic, relational database normalization in MySQL, algorithm optimization, and dynamic web applications.
+   * *Direct Email:* `occmansilaomikechristopher@gmail.com`
+   * *GitHub Profile:* [occmansilaomikechristopher-byte](https://github.com/occmansilaomikechristopher-byte)
+
+> **Note:** All member details, roles, skills, profile photos, and social links are **100% editable and synchronized** via the WordPress Admin dashboard under **Team Members**.
+
+---
+
+## 🚀 The 6 Aligned Showcase Projects
+
+1. **Cloud Database & Web Platform System** *(Category: Programming)*
+   * *Lead Specialist:* Mike Christopher Mansilao (Programmer)
+   * *Tech Stack:* PHP, JavaScript, MySQL, WordPress, REST API, HTML5/CSS3
+   * *Overview:* Dynamic custom web platform engineered with modular PHP object-oriented architecture, secure MySQL database handling, and reactive front-end modules.
+
+2. **Comprehensive REST API & System Architecture Documentation** *(Category: Technical Writing)*
+   * *Lead Specialist:* Lorence Mar Bigtasin (Technical Writer)
+   * *Tech Stack:* Markdown, Swagger/OpenAPI, GitBook, Docusaurus, Postman
+   * *Overview:* Exhaustive technical documentation suite detailing 60+ API endpoints, software architecture diagrams, deployment SOPs, and user onboarding manuals.
+
+3. **Agile Sprint Workflow & Milestone Delivery Framework** *(Category: Project Management)*
+   * *Lead Specialist:* Ariel Caharian (Project Manager)
+   * *Tech Stack:* Agile/Scrum, JIRA, Trello, Confluence, Gantt Charts, QA Matrix
+   * *Overview:* Strategic project delivery framework managing cross-functional development sprints, risk mitigation protocols, and on-time milestone deployments.
+
+4. **Predictive Sales & Customer Telemetry Analytics** *(Category: Data Analysis)*
+   * *Lead Specialist:* Niel Kenneth De jesus (Data Analyst)
+   * *Tech Stack:* Python, SQL, Tableau, Pandas, Excel, PowerBI
+   * *Overview:* End-to-end data pipeline analyzing 500,000+ transaction records, forecasting demand trends with predictive statistical models and interactive BI dashboards.
+
+5. **Cloud Resource & Infrastructure Monitoring Portal** *(Category: Cloud Computing)*
+   * *Lead Specialist:* Collaborative Group Project (BSIT 4th Year Cloud Computing)
+   * *Tech Stack:* Cloud Computing, PHP, Python, MySQL, Linux, Apache
+   * *Overview:* A collaborative cloud computing platform combining real-time telemetry analytics, agile project governance, technical system documentation, and modular programming.
+
+6. **Custom Responsive WordPress Portfolio Architecture** *(Category: Programming)*
+   * *Lead Specialist:* The 4-Member Group
+   * *Tech Stack:* WordPress, PHP 8.x, MySQL, JavaScript, CSS Grid
+   * *Overview:* Modern dark-themed bespoke WordPress portfolio featuring custom post types, AJAX contact forms, dynamic category filters, and mobile-first responsiveness.
 
 ---
 
