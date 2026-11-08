@@ -49,7 +49,7 @@ $members = get_posts(array(
                     </div>
                     <div class="contact-info-content">
                         <h4><?php _e('Direct Team Email', 'quadro'); ?></h4>
-                        <p><a href="mailto:contact@quadro-dev.com">contact@quadro-dev.com</a></p>
+                        <p><a href="mailto:occmansilaomikechristopher@gmail.com">occmansilaomikechristopher@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ $members = get_posts(array(
                     </div>
                     <div class="contact-info-content">
                         <h4><?php _e('Open Source Repositories', 'quadro'); ?></h4>
-                        <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/quadro-dev</a></p>
+                        <p><a href="https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio" target="_blank" rel="noopener noreferrer">github.com/occmansilaomikechristopher-byte</a></p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <?php
 /**
- * One-Click Demo Content Seeder
- * Instantly populates the 4 team members, showcase projects, and core pages.
+ * One-Click Demo Content Seeder & Auto-Synchronization
+ * Instantly populates and synchronizes the 4 team members, showcase projects, and core pages.
  *
  * @package Quadro
  */
@@ -30,25 +30,24 @@ add_action('admin_menu', 'quadro_add_seeder_menu');
 function quadro_render_seeder_page() {
     if (isset($_POST['quadro_run_seeder']) && check_admin_referer('quadro_run_seeder_nonce')) {
         quadro_execute_demo_seeder();
-        echo '<div class="notice notice-success is-dismissible"><p><strong>' . esc_html__('Success! 4 Team Members, 6 Portfolio Projects, Navigation Menu, and Core Pages have been created successfully!', 'quadro') . '</strong></p></div>';
+        echo '<div class="notice notice-success is-dismissible"><p><strong>' . esc_html__('Success! 4 Team Members, 6 Portfolio Projects, Navigation Menu, and Core Pages have been synchronized successfully!', 'quadro') . '</strong></p></div>';
     }
     ?>
     <div class="wrap">
-        <h1><?php _e('Quadro Group Portfolio - Demo Content Generator', 'quadro'); ?></h1>
-        <p><?php _e('Click the button below to automatically generate all 4 placeholder team members, 6 showcase projects, and standard pages configured with the dark modern theme.', 'quadro'); ?></p>
+        <h1><?php _e('Quadro Group Portfolio - Data & Content Synchronizer', 'quadro'); ?></h1>
+        <p><?php _e('Click the button below to update and synchronize all 4 team members with their updated roles (Data Analyst, Project Manager, Technical Writer, PROGRAMMER) and 6 projects.', 'quadro'); ?></p>
         
         <div style="background: #fff; padding: 25px; border-radius: 8px; max-width: 650px; border: 1px solid #ccd0d4; margin-top: 20px;">
-            <h3><?php _e('What will be created:', 'quadro'); ?></h3>
+            <h3><?php _e('What will be synchronized:', 'quadro'); ?></h3>
             <ul style="list-style: disc; padding-left: 20px; line-height: 1.8;">
-                <li><strong>4 Team Members:</strong> Member One (Frontend), Member Two (Backend), Member Three (UI/UX), Member Four (Full-Stack).</li>
-                <li><strong>6 Showcase Projects:</strong> Enterprise Cloud Portal, Design System, REST API Gateway, Analytics Dashboard, Headless E-Commerce, Interactive Mobile App.</li>
-                <li><strong>Core Pages:</strong> Home, About Us, Our Team, Our Projects, Contact Us.</li>
-                <li><strong>Navigation Menu:</strong> Automatically registered and assigned to header.</li>
+                <li><strong>4 Team Members:</strong> Niel Kenneth De jesus (Data Analyst), Ariel Caharian (Project Manager), Lorence Mar Bigtasin (Technical Writer), Mike Christopher Mansilao (PROGRAMMER).</li>
+                <li><strong>6 Showcase Projects:</strong> Cloud Database & Web Platform System, REST API Documentation, Agile Sprint Framework, Sales & Telemetry Analytics, Infrastructure Monitoring Portal, and Custom WordPress Portfolio.</li>
+                <li><strong>Broken Link Sanitation:</strong> Strips fictional placeholder domains (e.g. member-two.dev) and points repositories directly to the official GitHub repository.</li>
             </ul>
 
             <form method="post" style="margin-top: 25px;">
                 <?php wp_nonce_field('quadro_run_seeder_nonce'); ?>
-                <input type="submit" name="quadro_run_seeder" class="button button-primary button-hero" value="<?php esc_attr_e('Seed Demo Portfolio Content Now', 'quadro'); ?>" />
+                <input type="submit" name="quadro_run_seeder" class="button button-primary button-hero" value="<?php esc_attr_e('Sync Portfolio Content Now', 'quadro'); ?>" />
             </form>
         </div>
     </div>
@@ -56,69 +55,105 @@ function quadro_render_seeder_page() {
 }
 
 /**
- * Execute Seeding Logic
+ * Automatic Synchronizer Hook
+ * Executes automatically when any WordPress page loads to ensure roles, bios, and links are updated.
+ */
+function quadro_auto_sync_roles_and_bios() {
+    $current_version = '2026.11.08.v7';
+    if (get_option('quadro_data_sync_version') !== $current_version || isset($_GET['force_quadro_sync'])) {
+        quadro_execute_demo_seeder();
+        update_option('quadro_data_sync_version', $current_version);
+    }
+}
+add_action('init', 'quadro_auto_sync_roles_and_bios');
+
+/**
+ * Execute Seeding and Synchronization Logic
  */
 function quadro_execute_demo_seeder() {
-    // 1. Seed 4 Team Members
+    $official_github = 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio';
+
+    // 1. Seed & Sync 4 Team Members
     $members_data = array(
         array(
+            'match_titles'=> array('Niel Kenneth De jesus', 'Member One', 'Frontend Developer'),
             'title'       => 'Niel Kenneth De jesus',
             'role'        => 'Data Analyst',
             'skills'      => 'Data Analysis, Python, SQL, Statistics, Excel, Tableau',
             'experience'  => '4+ Years',
             'email'       => 'nielkenneth.dejesus@gmail.com',
-            'github'      => 'https://github.com/niel-dejesus',
-            'linkedin'    => 'https://linkedin.com/in/niel-dejesus',
-            'twitter'     => 'https://twitter.com/niel_dejesus',
-            'portfolio'   => 'https://niel-dejesus.dev',
+            'github'      => $official_github,
+            'linkedin'    => '',
+            'twitter'     => '',
+            'portfolio'   => '',
             'excerpt'     => 'Specializes in quantitative data analysis, data storytelling, statistical reporting, and predictive data modeling.',
-            'content'     => 'Niel Kenneth De jesus is an analytical specialist dedicated to transforming complex raw datasets into actionable intelligence and strategic business insights.'
+            'content'     => 'Niel Kenneth De jesus is an analytical specialist dedicated to transforming complex raw datasets into actionable intelligence and strategic business insights. Proficient in Python, SQL, Tableau, and statistical forecasting.'
         ),
         array(
+            'match_titles'=> array('Ariel Caharian', 'Member Two', 'Backend Developer'),
             'title'       => 'Ariel Caharian',
             'role'        => 'Project Manager',
             'skills'      => 'Agile/Scrum, Project Roadmapping, Resource Allocation, JIRA, QA Leadership',
             'experience'  => '5+ Years',
             'email'       => 'ariel.caharian@gmail.com',
-            'github'      => 'https://github.com/ariel-caharian',
-            'linkedin'    => 'https://linkedin.com/in/ariel-caharian',
-            'twitter'     => 'https://twitter.com/ariel_caharian',
-            'portfolio'   => 'https://ariel-caharian.dev',
+            'github'      => $official_github,
+            'linkedin'    => '',
+            'twitter'     => '',
+            'portfolio'   => '',
             'excerpt'     => 'Orchestrates software delivery workflows, aligns team objectives, manages sprint deadlines, and ensures quality assurance.',
-            'content'     => 'Ariel Caharian provides leadership across the entire software delivery lifecycle, facilitating cross-functional communication and agile execution.'
+            'content'     => 'Ariel Caharian provides leadership across the entire software delivery lifecycle, facilitating cross-functional communication, Agile/Scrum execution, risk management, and milestone roadmaps.'
         ),
         array(
+            'match_titles'=> array('Lorence Mar Bigtasin', 'Member Three', 'UI/UX Designer'),
             'title'       => 'Lorence Mar Bigtasin',
             'role'        => 'Technical Writer',
             'skills'      => 'Technical Documentation, API Specifications, Software Architecture Writing, Markdown, User Manuals',
             'experience'  => '4+ Years',
             'email'       => 'lorence.bigtasin@gmail.com',
-            'github'      => 'https://github.com/lorence-bigtasin',
-            'linkedin'    => 'https://linkedin.com/in/lorence-bigtasin',
-            'twitter'     => 'https://twitter.com/lorence_bigtasin',
-            'portfolio'   => 'https://lorence-bigtasin.dev',
+            'github'      => $official_github,
+            'linkedin'    => '',
+            'twitter'     => '',
+            'portfolio'   => '',
             'excerpt'     => 'Crafts thorough technical documentation, developer API guides, system architectures, and end-user guides.',
-            'content'     => 'Lorence Mar Bigtasin bridges engineering specifications and user clarity, producing comprehensive API documentation and standard operating procedures.'
+            'content'     => 'Lorence Mar Bigtasin bridges engineering specifications and user clarity, producing comprehensive API documentation, system architecture blueprints, and standard operating procedures.'
         ),
         array(
+            'match_titles'=> array('Mike Christopher Mansilao', 'Member Four', 'Full-Stack Developer'),
             'title'       => 'Mike Christopher Mansilao',
             'role'        => 'PROGRAMMER',
             'skills'      => 'PHP, JavaScript, MySQL, WordPress, Python, Web Applications',
             'experience'  => '5+ Years',
             'email'       => 'occmansilaomikechristopher@gmail.com',
             'github'      => 'https://github.com/occmansilaomikechristopher-byte',
-            'linkedin'    => 'https://linkedin.com/in/mike-mansilao',
-            'twitter'     => 'https://twitter.com/mike_mansilao',
-            'portfolio'   => 'https://mike-mansilao.dev',
+            'linkedin'    => '',
+            'twitter'     => '',
+            'portfolio'   => '',
             'excerpt'     => 'Engineers robust software algorithms, database systems, dynamic web applications, and custom WordPress systems.',
-            'content'     => 'Mike Christopher Mansilao is a dedicated software programmer proficient in building resilient backend logic, database queries, and scalable web solutions.'
+            'content'     => 'Mike Christopher Mansilao is a dedicated software programmer proficient in building resilient backend logic, relational database queries in MySQL, REST APIs, and scalable web solutions.'
         ),
     );
 
     $inserted_members = array();
     foreach ($members_data as $m) {
-        $existing = get_page_by_title($m['title'], OBJECT, 'team_member');
-        if (!$existing) {
+        $existing = null;
+        foreach ($m['match_titles'] as $possible_title) {
+            $found = get_page_by_title($possible_title, OBJECT, 'team_member');
+            if ($found) {
+                $existing = $found;
+                break;
+            }
+        }
+
+        if ($existing) {
+            $member_id = $existing->ID;
+            wp_update_post(array(
+                'ID'           => $member_id,
+                'post_title'   => $m['title'],
+                'post_content' => $m['content'],
+                'post_excerpt' => $m['excerpt'],
+                'post_status'  => 'publish',
+            ));
+        } else {
             $member_id = wp_insert_post(array(
                 'post_title'   => $m['title'],
                 'post_content' => $m['content'],
@@ -126,32 +161,31 @@ function quadro_execute_demo_seeder() {
                 'post_status'  => 'publish',
                 'post_type'    => 'team_member',
             ));
+        }
 
-            if ($member_id && !is_wp_error($member_id)) {
-                update_post_meta($member_id, '_member_role_title', $m['role']);
-                update_post_meta($member_id, '_member_skills', $m['skills']);
-                update_post_meta($member_id, '_member_experience', $m['experience']);
-                update_post_meta($member_id, '_member_email', $m['email']);
-                update_post_meta($member_id, '_member_github', $m['github']);
-                update_post_meta($member_id, '_member_linkedin', $m['linkedin']);
-                update_post_meta($member_id, '_member_twitter', $m['twitter']);
-                update_post_meta($member_id, '_member_portfolio', $m['portfolio']);
-                update_post_meta($member_id, '_member_featured', '1');
-                $inserted_members[$m['title']] = $member_id;
-            }
-        } else {
-            $inserted_members[$m['title']] = $existing->ID;
+        if ($member_id && !is_wp_error($member_id)) {
+            update_post_meta($member_id, '_member_role_title', $m['role']);
+            update_post_meta($member_id, '_member_skills', $m['skills']);
+            update_post_meta($member_id, '_member_experience', $m['experience']);
+            update_post_meta($member_id, '_member_email', $m['email']);
+            update_post_meta($member_id, '_member_github', $m['github']);
+            update_post_meta($member_id, '_member_linkedin', $m['linkedin']);
+            update_post_meta($member_id, '_member_twitter', $m['twitter']);
+            update_post_meta($member_id, '_member_portfolio', $m['portfolio']); // Clears any member-two.dev!
+            update_post_meta($member_id, '_member_featured', '1');
+            $inserted_members[$m['title']] = $member_id;
         }
     }
 
-    // 2. Seed 6 Portfolio Projects
+    // 2. Seed & Sync 6 Portfolio Projects
     $projects_data = array(
         array(
+            'match_titles'=> array('Cloud Database & Web Platform System', 'Enterprise Cloud Infrastructure Portal'),
             'title'       => 'Cloud Database & Web Platform System',
             'category'    => 'Programming',
             'tech_stack'  => 'PHP, JavaScript, MySQL, WordPress, REST API, HTML5/CSS3',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'Nexus Digital Systems',
             'year'        => '2026',
             'excerpt'     => 'Dynamic custom web platform engineered with modular PHP object-oriented architecture, secure MySQL database handling, and reactive front-end modules.',
@@ -159,11 +193,12 @@ function quadro_execute_demo_seeder() {
             'featured'    => '1'
         ),
         array(
+            'match_titles'=> array('Comprehensive REST API & System Architecture Documentation', 'High-Throughput RESTful API Gateway'),
             'title'       => 'Comprehensive REST API & System Architecture Documentation',
             'category'    => 'Technical Writing',
             'tech_stack'  => 'Markdown, Swagger/OpenAPI, GitBook, Docusaurus, Postman',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'FinTech Enterprise Protocol',
             'year'        => '2026',
             'excerpt'     => 'Exhaustive technical documentation suite detailing 60+ API endpoints, software architecture diagrams, deployment SOPs, and user onboarding manuals.',
@@ -171,11 +206,12 @@ function quadro_execute_demo_seeder() {
             'featured'    => '1'
         ),
         array(
+            'match_titles'=> array('Agile Sprint Workflow & Milestone Delivery Framework', 'Universal Design System & Component Library'),
             'title'       => 'Agile Sprint Workflow & Milestone Delivery Framework',
             'category'    => 'Project Management',
             'tech_stack'  => 'Agile/Scrum, JIRA, Trello, Confluence, Gantt Charts, QA Matrix',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'Apex Global Solutions',
             'year'        => '2026',
             'excerpt'     => 'Strategic project delivery framework managing cross-functional development sprints, risk mitigation protocols, and on-time milestone deployments.',
@@ -183,11 +219,12 @@ function quadro_execute_demo_seeder() {
             'featured'    => '1'
         ),
         array(
+            'match_titles'=> array('Predictive Sales & Customer Telemetry Analytics', 'Real-Time Telemetry & Analytics Dashboard'),
             'title'       => 'Predictive Sales & Customer Telemetry Analytics',
             'category'    => 'Data Analysis',
             'tech_stack'  => 'Python, SQL, Tableau, Pandas, Excel, PowerBI',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'RetailSphere Analytics',
             'year'        => '2026',
             'excerpt'     => 'End-to-end data pipeline analyzing 500,000+ transaction records, forecasting demand trends with predictive statistical models and interactive BI dashboards.',
@@ -195,11 +232,12 @@ function quadro_execute_demo_seeder() {
             'featured'    => '1'
         ),
         array(
+            'match_titles'=> array('Cloud Resource & Infrastructure Monitoring Portal', 'Headless E-Commerce Architecture'),
             'title'       => 'Cloud Resource & Infrastructure Monitoring Portal',
             'category'    => 'Cloud Computing',
             'tech_stack'  => 'Cloud Computing, PHP, Python, MySQL, Linux, Apache',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'BSIT 4th Year Cloud Computing Project',
             'year'        => '2026',
             'excerpt'     => 'A collaborative cloud computing platform combining real-time telemetry analytics, agile project governance, technical system documentation, and modular programming.',
@@ -207,11 +245,12 @@ function quadro_execute_demo_seeder() {
             'featured'    => '0'
         ),
         array(
+            'match_titles'=> array('Custom Responsive WordPress Portfolio Architecture', 'Cross-Platform Mobile Application'),
             'title'       => 'Custom Responsive WordPress Portfolio Architecture',
             'category'    => 'Programming',
             'tech_stack'  => 'WordPress, PHP 8.x, MySQL, JavaScript, CSS Grid',
-            'demo'        => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
-            'github'      => 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio',
+            'demo'        => $official_github,
+            'github'      => $official_github,
             'client'      => 'Quadro Engineering Collective',
             'year'        => '2026',
             'excerpt'     => 'Modern dark-themed bespoke WordPress portfolio featuring custom post types, AJAX contact forms, dynamic category filters, and mobile-first responsiveness.',
@@ -221,8 +260,30 @@ function quadro_execute_demo_seeder() {
     );
 
     foreach ($projects_data as $p) {
-        $existing = get_page_by_title($p['title'], OBJECT, 'portfolio_project');
+        $existing = null;
+        if (!empty($p['match_titles'])) {
+            foreach ($p['match_titles'] as $pt) {
+                $found = get_page_by_title($pt, OBJECT, 'portfolio_project');
+                if ($found) {
+                    $existing = $found;
+                    break;
+                }
+            }
+        }
         if (!$existing) {
+            $existing = get_page_by_title($p['title'], OBJECT, 'portfolio_project');
+        }
+
+        if ($existing) {
+            $project_id = $existing->ID;
+            wp_update_post(array(
+                'ID'           => $project_id,
+                'post_title'   => $p['title'],
+                'post_content' => $p['content'],
+                'post_excerpt' => $p['excerpt'],
+                'post_status'  => 'publish',
+            ));
+        } else {
             $project_id = wp_insert_post(array(
                 'post_title'   => $p['title'],
                 'post_content' => $p['content'],
@@ -230,18 +291,18 @@ function quadro_execute_demo_seeder() {
                 'post_status'  => 'publish',
                 'post_type'    => 'portfolio_project',
             ));
+        }
 
-            if ($project_id && !is_wp_error($project_id)) {
-                update_post_meta($project_id, '_project_tech_stack', $p['tech_stack']);
-                update_post_meta($project_id, '_project_live_demo', $p['demo']);
-                update_post_meta($project_id, '_project_github_url', $p['github']);
-                update_post_meta($project_id, '_project_client', $p['client']);
-                update_post_meta($project_id, '_project_year', $p['year']);
-                update_post_meta($project_id, '_project_featured', $p['featured']);
+        if ($project_id && !is_wp_error($project_id)) {
+            update_post_meta($project_id, '_project_tech_stack', $p['tech_stack']);
+            update_post_meta($project_id, '_project_live_demo', $p['demo']);
+            update_post_meta($project_id, '_project_github_url', $p['github']);
+            update_post_meta($project_id, '_project_client', $p['client']);
+            update_post_meta($project_id, '_project_year', $p['year']);
+            update_post_meta($project_id, '_project_featured', $p['featured']);
 
-                // Assign category taxonomy
-                wp_set_object_terms($project_id, $p['category'], 'project_category');
-            }
+            // Assign category taxonomy
+            wp_set_object_terms($project_id, $p['category'], 'project_category');
         }
     }
 
@@ -323,4 +384,3 @@ function quadro_execute_demo_seeder() {
         }
     }
 }
-

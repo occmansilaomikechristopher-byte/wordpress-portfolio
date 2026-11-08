@@ -43,12 +43,34 @@ function quadro_get_member_skills_array($post_id = 0) {
  */
 function quadro_get_member_socials($post_id = 0) {
     $post_id = $post_id ? $post_id : get_the_ID();
+
+    $github    = get_post_meta($post_id, '_member_github', true);
+    $linkedin  = get_post_meta($post_id, '_member_linkedin', true);
+    $twitter   = get_post_meta($post_id, '_member_twitter', true);
+    $portfolio = get_post_meta($post_id, '_member_portfolio', true);
+    $email     = get_post_meta($post_id, '_member_email', true);
+
+    // Sanitize dummy portfolio domains that cause DNS errors (e.g. member-two.dev, *.dev placeholders)
+    if (!empty($portfolio) && (preg_match('/member-(one|two|three|four)|\.dev$/i', $portfolio) || strpos($portfolio, 'personalportfolio.dev') !== false)) {
+        $portfolio = '';
+    }
+
+    // Sanitize dummy github URLs that cause 404 Page Not Found on GitHub
+    if (empty($github) || strpos($github, 'member-') !== false || strpos($github, 'github.com/quadro-dev') !== false || strpos($github, 'github.com/username') !== false) {
+        $github = 'https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio';
+    }
+
+    // Default email to Gmail
+    if (empty($email) || strpos($email, '@quadro-dev.com') !== false) {
+        $email = 'occmansilaomikechristopher@gmail.com';
+    }
+
     return array(
-        'github'    => get_post_meta($post_id, '_member_github', true),
-        'linkedin'  => get_post_meta($post_id, '_member_linkedin', true),
-        'twitter'   => get_post_meta($post_id, '_member_twitter', true),
-        'portfolio' => get_post_meta($post_id, '_member_portfolio', true),
-        'email'     => get_post_meta($post_id, '_member_email', true),
+        'github'    => $github,
+        'linkedin'  => $linkedin,
+        'twitter'   => $twitter,
+        'portfolio' => $portfolio,
+        'email'     => $email,
     );
 }
 
