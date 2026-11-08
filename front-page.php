@@ -78,32 +78,41 @@ get_header();
             </p>
         </div>
 
-        <div class="about-pillars-grid">
+        <div class="about-pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
             <!-- Pillar 1 -->
             <div class="pillar-card">
                 <div class="pillar-icon-box">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
-                <h3 class="pillar-title"><?php _e('Frontend Engineering', 'quadro'); ?></h3>
-                <p><?php _e('Modern JavaScript, semantic HTML5, fluid responsive styling, and micro-interactions optimized for 60fps rendering speeds.', 'quadro'); ?></p>
+                <h3 class="pillar-title"><?php _e('Software Programming', 'quadro'); ?></h3>
+                <p><?php _e('Robust PHP backend logic, MySQL relational database management, clean OOP architecture, and dynamic WordPress web applications.', 'quadro'); ?></p>
             </div>
 
             <!-- Pillar 2 -->
             <div class="pillar-card">
                 <div class="pillar-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                 </div>
-                <h3 class="pillar-title"><?php _e('Backend & Database', 'quadro'); ?></h3>
-                <p><?php _e('Robust PHP backends, relational MySQL schema optimization, REST API endpoints, and rock-solid server security.', 'quadro'); ?></p>
+                <h3 class="pillar-title"><?php _e('Data Analytics', 'quadro'); ?></h3>
+                <p><?php _e('Quantitative telemetry analysis, statistical reporting, SQL query optimization, and interactive data visualization dashboards.', 'quadro'); ?></p>
             </div>
 
             <!-- Pillar 3 -->
             <div class="pillar-card">
                 <div class="pillar-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
-                <h3 class="pillar-title"><?php _e('UI/UX Design Systems', 'quadro'); ?></h3>
-                <p><?php _e('Human-centered design, interactive wireframing, WCAG accessible interfaces, and scalable design tokens created in Figma.', 'quadro'); ?></p>
+                <h3 class="pillar-title"><?php _e('Project Management', 'quadro'); ?></h3>
+                <p><?php _e('Agile/Scrum roadmapping, cross-functional team leadership, milestone sprint planning, and quality assurance oversight.', 'quadro'); ?></p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="pillar-card">
+                <div class="pillar-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <h3 class="pillar-title"><?php _e('Technical Writing', 'quadro'); ?></h3>
+                <p><?php _e('Exhaustive REST API specifications, system architecture documentation, standard operating procedures, and developer guides.', 'quadro'); ?></p>
             </div>
         </div>
     </div>

@@ -24,10 +24,11 @@ get_header();
     <!-- Category Filter Bar -->
     <div class="project-filter-bar">
         <button type="button" class="filter-btn active" data-filter="all"><?php _e('All Projects', 'quadro'); ?></button>
-        <button type="button" class="filter-btn" data-filter="frontend"><?php _e('Frontend', 'quadro'); ?></button>
-        <button type="button" class="filter-btn" data-filter="backend"><?php _e('Backend', 'quadro'); ?></button>
-        <button type="button" class="filter-btn" data-filter="ui/ux"><?php _e('UI/UX Design', 'quadro'); ?></button>
-        <button type="button" class="filter-btn" data-filter="full-stack"><?php _e('Full-Stack', 'quadro'); ?></button>
+        <button type="button" class="filter-btn" data-filter="programming"><?php _e('Programming', 'quadro'); ?></button>
+        <button type="button" class="filter-btn" data-filter="data-analysis"><?php _e('Data Analysis', 'quadro'); ?></button>
+        <button type="button" class="filter-btn" data-filter="project-management"><?php _e('Project Management', 'quadro'); ?></button>
+        <button type="button" class="filter-btn" data-filter="technical-writing"><?php _e('Technical Writing', 'quadro'); ?></button>
+        <button type="button" class="filter-btn" data-filter="cloud-computing"><?php _e('Cloud Computing', 'quadro'); ?></button>
     </div>
 
     <?php
