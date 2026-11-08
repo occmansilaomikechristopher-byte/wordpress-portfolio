@@ -57,46 +57,46 @@ get_header();
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
             <div>
-                <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">Frontend</h4>
+                <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">Programming</h4>
                 <ul style="color: var(--text-secondary); line-height: 2;">
-                    <li>• HTML5 (Semantic & Accessible)</li>
-                    <li>• CSS3, PostCSS & CSS Grid</li>
+                    <li>• PHP 8.x Object-Oriented Logic</li>
+                    <li>• MySQL Relational Queries</li>
                     <li>• Modern JavaScript (ES6+)</li>
-                    <li>• Tailwind CSS & SCSS</li>
-                    <li>• React & Micro-frontends</li>
+                    <li>• Custom WordPress Theme APIs</li>
+                    <li>• Algorithms & Backend Security</li>
                 </ul>
             </div>
 
             <div>
-                <h4 style="color: #a5b4fc; margin-bottom: 1rem;">Backend & DB</h4>
+                <h4 style="color: #38bdf8; margin-bottom: 1rem;">Data Analysis</h4>
                 <ul style="color: var(--text-secondary); line-height: 2;">
-                    <li>• PHP 8.x Object-Oriented Architecture</li>
-                    <li>• MySQL & MariaDB Normalization</li>
-                    <li>• RESTful API Development</li>
-                    <li>• WordPress Internal APIs & Hooks</li>
-                    <li>• Session & Cache Optimization</li>
+                    <li>• Python Data Modeling & Pandas</li>
+                    <li>• SQL Query Optimization</li>
+                    <li>• Statistical Forecasting & Metrics</li>
+                    <li>• Tableau & PowerBI Dashboards</li>
+                    <li>• Telemetry Trend Analytics</li>
                 </ul>
             </div>
 
             <div>
-                <h4 style="color: #6ee7b7; margin-bottom: 1rem;">Design & UI</h4>
+                <h4 style="color: #a5b4fc; margin-bottom: 1rem;">Project Management</h4>
                 <ul style="color: var(--text-secondary); line-height: 2;">
-                    <li>• Figma Design Systems & Tokens</li>
-                    <li>• Interactive Prototyping</li>
-                    <li>• Wireframing & User Journeys</li>
-                    <li>• Responsive Breakpoint Planning</li>
-                    <li>• WCAG 2.1 AA Accessibility</li>
+                    <li>• Agile & Scrum Sprint Planning</li>
+                    <li>• JIRA & Trello Roadmaps</li>
+                    <li>• Quality Assurance Benchmarks</li>
+                    <li>• Resource & Velocity Management</li>
+                    <li>• Milestone Risk Mitigation</li>
                 </ul>
             </div>
 
             <div>
-                <h4 style="color: #f59e0b; margin-bottom: 1rem;">Full-Stack & DevOps</h4>
+                <h4 style="color: #c4b5fd; margin-bottom: 1rem;">Technical Writing</h4>
                 <ul style="color: var(--text-secondary); line-height: 2;">
-                    <li>• Full Software Lifecycle Management</li>
-                    <li>• Git & GitHub Collaboration</li>
-                    <li>• Headless CMS & Decoupled APIs</li>
-                    <li>• Security Audits & Input Sanitization</li>
-                    <li>• XAMPP & Apache Deployment</li>
+                    <li>• REST API Endpoint Documentation</li>
+                    <li>• Software Architecture Manuals</li>
+                    <li>• Markdown & OpenAPI Standards</li>
+                    <li>• Standard Operating Procedures</li>
+                    <li>• User & Developer Onboarding Guides</li>
                 </ul>
             </div>
         </div>
