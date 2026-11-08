@@ -18,7 +18,7 @@ get_header();
         <div class="hero-pill">
             <span class="status-pill">
                 <span class="status-dot"></span>
-                <span><?php _e('Software Engineering & Design Syndicate', 'quadro'); ?></span>
+                <span><?php _e('BSIT Cloud Computing & Software Engineering Collective', 'quadro'); ?></span>
             </span>
         </div>
 
@@ -28,7 +28,7 @@ get_header();
         </h1>
 
         <p class="hero-description">
-            <?php _e('We are a tightly-knit group of four developers and designers delivering high-performance web applications, resilient backend architectures, intuitive user interfaces, and custom WordPress solutions.', 'quadro'); ?>
+            <?php _e('We are a multidisciplinary team of four specialists delivering robust software programming, predictive data analytics, agile project governance, and comprehensive technical documentation.', 'quadro'); ?>
         </p>
 
         <div class="hero-cta-group">
@@ -74,7 +74,7 @@ get_header();
             <span class="section-eyebrow"><?php _e('Our Collective Power', 'quadro'); ?></span>
             <h2 class="section-title"><?php _e('Engineered Across Four Disciplines', 'quadro'); ?></h2>
             <p class="section-subtitle">
-                <?php _e('Each team member anchors a critical pillar of modern software delivery, creating a frictionless workflow from Figma to production.', 'quadro'); ?>
+                <?php _e('Each team member anchors a critical pillar of modern software delivery, uniting programming, data intelligence, agile leadership, and technical documentation.', 'quadro'); ?>
             </p>
         </div>
 
@@ -176,7 +176,7 @@ get_header();
             <span class="section-eyebrow"><?php _e('The Squad', 'quadro'); ?></span>
             <h2 class="section-title"><?php _e('Meet The 4 Team Members', 'quadro'); ?></h2>
             <p class="section-subtitle">
-                <?php _e('Get to know each developer and designer shaping our digital architecture.', 'quadro'); ?>
+                <?php _e('Get to know each specialist shaping our programming, data analytics, project leadership, and technical documentation.', 'quadro'); ?>
             </p>
         </div>
 

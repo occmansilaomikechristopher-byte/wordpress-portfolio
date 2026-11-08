@@ -18,14 +18,14 @@ get_header();
         <div>
             <span class="badge badge-cyan about-intro-badge"><?php _e('About Our Collective', 'quadro'); ?></span>
             <h1 class="about-intro-title">
-                <?php _e('Four Passionate Developers.', 'quadro'); ?><br>
+                <?php _e('Four Dedicated Specialists.', 'quadro'); ?><br>
                 <span class="gradient-text"><?php _e('United by Engineering Craft.', 'quadro'); ?></span>
             </h1>
             <p class="about-lead-text">
                 <?php _e('Quadro was formed with a straightforward belief: specialized talent works best when closely aligned. Rather than a bloated agency hierarchy, we are four dedicated builders covering every facet of modern web engineering.', 'quadro'); ?>
             </p>
             <p>
-                <?php _e('With backgrounds spanning frontend performance, backend infrastructure, user interface research, and full-stack integration, our collaborative workflow ensures zero translation loss between design concepts and production code.', 'quadro'); ?>
+                <?php _e('With expertise spanning software programming, quantitative data analysis, agile project management, and comprehensive technical documentation, our collaborative workflow ensures seamless execution across every phase of digital systems.', 'quadro'); ?>
             </p>
             <div style="margin-top: 2rem;">
                 <a href="<?php echo esc_url(home_url('/our-team')); ?>" class="btn btn-secondary">
@@ -49,7 +49,7 @@ get_header();
                     </li>
                     <li style="display: flex; gap: 0.75rem;">
                         <span style="color: var(--accent-emerald);">✔</span>
-                        <span><strong>End-to-End Ownership:</strong> From Figma UI tokens to MySQL database queries, every layer is handled by an expert.</span>
+                        <span><strong>End-to-End Ownership:</strong> From data schemas and agile roadmaps to MySQL queries and technical documentation, every layer is handled by an expert.</span>
                     </li>
                     <li style="display: flex; gap: 0.75rem;">
                         <span style="color: var(--accent-emerald);">✔</span>

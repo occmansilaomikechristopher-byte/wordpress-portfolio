@@ -17,7 +17,7 @@ get_header();
         <span class="section-eyebrow"><?php _e('The Engineering Force', 'quadro'); ?></span>
         <h1 class="section-title"><?php _e('Meet Our 4-Member Group', 'quadro'); ?></h1>
         <p class="section-subtitle">
-            <?php _e('Four specialized engineers and designers combining frontend artistry, backend scalability, user-centered design, and full-stack integration.', 'quadro'); ?>
+            <?php _e('Four specialized BSIT professionals uniting software programming, quantitative data analysis, agile project management, and comprehensive technical documentation.', 'quadro'); ?>
         </p>
     </div>
 

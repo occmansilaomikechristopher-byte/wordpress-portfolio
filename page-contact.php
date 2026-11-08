@@ -28,7 +28,7 @@ $members = get_posts(array(
         <span class="section-eyebrow"><?php _e('Direct Channels', 'quadro'); ?></span>
         <h1 class="section-title"><?php _e("Let's Build Something Exceptional", 'quadro'); ?></h1>
         <p class="section-subtitle">
-            <?php _e('Send an inquiry directly to our four-member collective or address a specific developer or designer.', 'quadro'); ?>
+            <?php _e('Send an inquiry directly to our four-member collective or address a specific specialist.', 'quadro'); ?>
         </p>
     </div>
 
@@ -38,7 +38,7 @@ $members = get_posts(array(
             <span class="badge badge-cyan" style="margin-bottom: 1rem;"><?php _e('Team Availability', 'quadro'); ?></span>
             <h2><?php _e('Direct Communication With Actual Builders', 'quadro'); ?></h2>
             <p style="margin-top: 1rem; font-size: 1.05rem;">
-                <?php _e('We welcome discussions around custom WordPress themes, web platforms, headless CMS architecture, and UI/UX design systems. Expect a reply within 24 hours.', 'quadro'); ?>
+                <?php _e('We welcome discussions around custom software programming, relational database systems, predictive data analytics, agile project governance, and technical documentation. Expect a reply within 24 hours.', 'quadro'); ?>
             </p>
 
             <div class="contact-info-list">
