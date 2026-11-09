@@ -94,10 +94,27 @@ function quadro_enqueue_scripts() {
         QUADRO_VERSION
     );
 
+    // Futuristic Welcome Intro Screen Styles
+    wp_enqueue_style(
+        'quadro-welcome-intro',
+        get_template_directory_uri() . '/assets/css/welcome-intro.css',
+        array('quadro-responsive'),
+        QUADRO_VERSION
+    );
+
     // Main JavaScript
     wp_enqueue_script(
         'quadro-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
+        array(),
+        QUADRO_VERSION,
+        true
+    );
+
+    // Futuristic Welcome Intro Screen Controller
+    wp_enqueue_script(
+        'quadro-welcome-intro',
+        get_template_directory_uri() . '/assets/js/welcome-intro.js',
         array(),
         QUADRO_VERSION,
         true

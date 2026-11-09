@@ -111,15 +111,21 @@ c:\Users\MANSILAO FAMILY\Desktop\PORTFOLIO\
 │   ├── demo-data-seeder.php       # One-click generator for the 4 members & projects
 │   └── template-tags.php          # Reusable helper functions & output formatters
 ├── assets/
+│   ├── audio/
+│   │   ├── welcome.mp3            # 54KB studio AI voice ("Welcome to the Quadro.dev Portfolio.")
+│   │   └── welcome.ogg            # 17KB lightweight Vorbis audio fallback
 │   ├── css/
+│   │   ├── welcome-intro.css      # Futuristic glassmorphism welcome screen styles
 │   │   ├── main.css               # Core layout, hero, team grid, project grid
 │   │   ├── components.css         # Glass cards, buttons, badges, forms, modals
 │   │   └── responsive.css         # Mobile-first breakpoints (320px to 4K)
 │   └── js/
+│       ├── welcome-intro.js       # Autoplay-compliant intro controller & audio handler
 │       ├── main.js                # Sticky nav, drawer toggle, smooth scrolling
 │       ├── project-filter.js      # Real-time category filtering (All, Frontend, Backend...)
 │       └── contact-ajax.js        # Nonce-protected AJAX submission with live feedback
 └── template-parts/
+    ├── welcome-intro.php          # Full-screen futuristic welcome intro overlay
     ├── member-card.php            # Reusable card component for team members
     └── project-card.php           # Reusable card component for portfolio projects
 ```

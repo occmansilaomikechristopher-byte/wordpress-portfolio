@@ -1,0 +1,423 @@
+/**
+ * Quadro Portfolio - Futuristic Welcome Intro Screen Styles
+ * Seamlessly overlays before entering the main site.
+ * Fully responsive, glassmorphic, hardware-accelerated.
+ */
+
+/* Prevent scrolling while intro is active */
+body.quadro-intro-active {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+/* Instant flash prevention for returning sessions */
+html.quadro-intro-seen #quadro-welcome-overlay {
+    display: none !important;
+}
+
+/* Fullscreen Overlay Container */
+.quadro-welcome-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #030712;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(10, 15, 30, 0.94) 0%, #030712 100%),
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 48px 48px, 48px 48px;
+    background-position: center center;
+    overflow: hidden;
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.85s;
+    visibility: visible;
+}
+
+/* Ambient Glowing Light Orbs */
+.intro-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.intro-glow-cyan {
+    top: 15%;
+    left: 20%;
+    width: clamp(280px, 40vw, 550px);
+    height: clamp(280px, 40vw, 550px);
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.16) 0%, transparent 68%);
+    filter: blur(80px);
+    animation: introGlowFloat1 10s ease-in-out infinite alternate;
+}
+
+.intro-glow-purple {
+    bottom: 15%;
+    right: 20%;
+    width: clamp(300px, 45vw, 600px);
+    height: clamp(300px, 45vw, 600px);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, transparent 70%);
+    filter: blur(90px);
+    animation: introGlowFloat2 12s ease-in-out infinite alternate;
+}
+
+@keyframes introGlowFloat1 {
+    0%   { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 30px) scale(1.15); }
+}
+
+@keyframes introGlowFloat2 {
+    0%   { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-35px, -25px) scale(1.12); }
+}
+
+/* Central Futuristic Glass Card */
+.intro-card {
+    position: relative;
+    z-index: 10;
+    max-width: 640px;
+    width: calc(100% - 2.5rem);
+    margin: 1.25rem;
+    padding: clamp(2rem, 5vw, 3.25rem) clamp(1.5rem, 5vw, 2.75rem);
+    background: rgba(8, 14, 26, 0.72);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid rgba(0, 240, 255, 0.22);
+    border-radius: 28px;
+    box-shadow: 
+        0 0 60px rgba(0, 240, 255, 0.12),
+        0 30px 60px -12px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    text-align: center;
+    color: #f1f5f9;
+    animation: introCardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes introCardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* High-tech Status Pill */
+.intro-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.28);
+    border-radius: 9999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: #38bdf8;
+    text-transform: uppercase;
+}
+
+.intro-status-dot-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+}
+
+.intro-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+.intro-status-ring {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid #00f0ff;
+    opacity: 0.75;
+    animation: introPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes introPing {
+    75%, 100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+/* Brand Emblem */
+.intro-emblem {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1.25rem;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(139, 92, 246, 0.2));
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+/* Elegant Futuristic Typography */
+.intro-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 5.2vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.85rem 0;
+    color: #ffffff;
+}
+
+.intro-title-gradient {
+    background: linear-gradient(135deg, #00f0ff 0%, #38bdf8 45%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px rgba(0, 240, 255, 0.35);
+}
+
+.intro-tagline {
+    font-size: clamp(0.95rem, 2.5vw, 1.12rem);
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0 auto 1.25rem auto;
+    max-width: 480px;
+}
+
+/* Four Disciplines Pill Badges */
+.intro-disciplines {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.intro-discipline-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+}
+
+/* Primary ENTER PORTFOLIO Action Button */
+.intro-enter-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 380px;
+    padding: 1.15rem 2rem;
+    background: linear-gradient(135deg, #00f0ff 0%, #0284c7 60%, #7c3aed 100%);
+    color: #030712;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    box-shadow: 
+        0 0 35px rgba(0, 240, 255, 0.4),
+        0 10px 25px -5px rgba(2, 132, 199, 0.5);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.intro-enter-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 0 50px rgba(0, 240, 255, 0.6),
+        0 14px 30px -4px rgba(2, 132, 199, 0.65);
+    color: #000000;
+}
+
+.intro-enter-btn:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.intro-enter-btn-inner {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.intro-sound-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #030712;
+}
+
+/* Dynamic Waveform Visualizer on Button */
+.intro-waveform {
+    display: none;
+    align-items: center;
+    gap: 3px;
+    height: 18px;
+    margin-left: 0.25rem;
+}
+
+.intro-enter-btn.playing .intro-waveform {
+    display: inline-flex;
+}
+
+.intro-waveform span {
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: #030712;
+    border-radius: 2px;
+    animation: waveBar 0.9s ease-in-out infinite alternate;
+}
+
+.intro-waveform span:nth-child(1) { animation-delay: 0.0s; height: 35%; }
+.intro-waveform span:nth-child(2) { animation-delay: 0.2s; height: 90%; }
+.intro-waveform span:nth-child(3) { animation-delay: 0.4s; height: 60%; }
+.intro-waveform span:nth-child(4) { animation-delay: 0.1s; height: 100%; }
+.intro-waveform span:nth-child(5) { animation-delay: 0.3s; height: 45%; }
+
+@keyframes waveBar {
+    0%   { transform: scaleY(0.25); }
+    100% { transform: scaleY(1); }
+}
+
+/* Voice Playing Notice / Status */
+.intro-voice-notice {
+    height: 24px;
+    margin-top: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: #38bdf8;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.intro-voice-notice.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.voice-notice-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00f0ff;
+    box-shadow: 0 0 8px #00f0ff;
+    animation: voiceDotPulse 1.2s infinite;
+}
+
+@keyframes voiceDotPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.75); }
+}
+
+/* Skip Intro Link / Button */
+.intro-skip-wrap {
+    margin-top: 1.25rem;
+}
+
+.intro-skip-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.intro-skip-btn:hover {
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.intro-skip-btn svg {
+    transition: transform 0.2s ease;
+}
+
+.intro-skip-btn:hover svg {
+    transform: translateX(3px);
+}
+
+/* Cinematic Exit Animation (Smooth fade, scale & blur) */
+.quadro-welcome-overlay.cinematic-exit {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(16px);
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 640px) {
+    .intro-card {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+    }
+
+    .intro-title {
+        font-size: 1.85rem;
+    }
+
+    .intro-disciplines {
+        gap: 0.35rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .intro-discipline-pill {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .intro-enter-btn {
+        padding: 1rem 1.5rem;
+        font-size: 0.98rem;
+    }
+}

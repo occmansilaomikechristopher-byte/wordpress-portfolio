@@ -18,6 +18,7 @@ if (!defined('ABSPATH')) {
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php get_template_part('template-parts/welcome-intro'); ?>
 
 <header class="site-header">
     <div class="container">
