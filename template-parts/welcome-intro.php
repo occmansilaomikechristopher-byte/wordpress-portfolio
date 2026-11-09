@@ -98,9 +98,9 @@ $audio_dir_uri = get_template_directory_uri() . '/assets/audio';
         </div>
     </div>
 
-    <!-- Hidden High-Fidelity Audio Element -->
+    <!-- Hidden High-Fidelity Audio Element (Deep Male Voice with Cache Busting) -->
     <audio id="quadro-welcome-audio" preload="auto">
-        <source src="<?php echo esc_url($audio_dir_uri . '/welcome.mp3'); ?>" type="audio/mpeg">
-        <source src="<?php echo esc_url($audio_dir_uri . '/welcome.ogg'); ?>" type="audio/ogg">
+        <source src="<?php echo esc_url($audio_dir_uri . '/welcome-male-deep.mp3?v=2.1'); ?>" type="audio/mpeg">
+        <source src="<?php echo esc_url($audio_dir_uri . '/welcome-male-deep.ogg?v=2.1'); ?>" type="audio/ogg">
     </audio>
 </div>
