@@ -1,25 +1,26 @@
 # Quadro - 4-Member Group Portfolio WordPress Theme
 
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org)
-[![PHP](https://img.shields.io/badge/PHP-8.0%2B-purple.svg)](https://php.net)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-purple.svg)](https://php.net)
+[![LocalWP](https://img.shields.io/badge/LocalWP-Ready-brightgreen.svg)](https://localwp.com/)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-green.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 A premier, high-performance, dark-themed **WordPress Group Portfolio Theme** built specifically for a 4-member BSIT Cloud Computing engineering collective covering Software Programming, Data Analysis, Agile Project Management, and Technical Writing.
 
-Engineered with a modern software agency aesthetic, the theme features responsive glassmorphism, native custom post types for team members and projects, and secure AJAX contact forms with WordPress security nonces.
+Developed and optimized for **LocalWP** (Local by Flywheel) development environment with complete support for Nginx 1.26+, PHP 8.2+, MySQL 8.4+, and one-click database management via Adminer.
 
 ---
 
-## 🌐 Live Production Deployment
+## 🌐 Live Production & Repository Links
 * **Live Website URL:** [https://quadro.gvaluminumandglassworks.com/](https://quadro.gvaluminumandglassworks.com/)
 * **Official GitHub Repository:** [https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio](https://github.com/occmansilaomikechristopher-byte/wordpress-portfolio)
-* **Instant HTML Preview:** Double-click **`preview.html`** in this folder to test responsiveness offline.
+* **Instant HTML Offline Preview:** Double-click **`preview.html`** in this folder to test responsiveness offline.
 
 ---
 
 ## 👥 The 4 Team Member Roles & Profiles
 
-The theme natively accommodates the four distinct BSIT engineering roles:
+The theme natively accommodates the four distinct BSIT engineering disciplines:
 
 1. **Niel Kenneth De jesus — Data Analyst**
    * *Core Stack:* Data Analysis, Python, SQL, Statistics, Excel, Tableau, PowerBI
@@ -99,8 +100,10 @@ c:\Users\MANSILAO FAMILY\Desktop\PORTFOLIO\
 ├── 404.php                        # Branded 404 error page
 ├── screenshot.png                 # WordPress dashboard theme preview (1200x900)
 ├── preview.html                   # Instant interactive HTML preview
-├── deploy-to-xampp.bat            # 1-Click batch sync script to C:\xampp\htdocs
-├── deploy-to-xampp.ps1            # 1-Click PowerShell sync script to C:\xampp\htdocs
+├── deploy-to-localwp.bat          # 1-Click batch sync script to LocalWP
+├── deploy-to-localwp.ps1          # 1-Click PowerShell sync script to LocalWP
+├── deploy-to-xampp.bat            # 1-Click batch sync script to XAMPP (Alternative)
+├── deploy-to-xampp.ps1            # 1-Click PowerShell sync script to XAMPP (Alternative)
 ├── inc/
 │   ├── custom-post-types.php      # Registers CPTs: team_member & portfolio_project
 │   ├── meta-boxes.php             # Native custom meta fields (roles, skills, URLs)
@@ -123,39 +126,50 @@ c:\Users\MANSILAO FAMILY\Desktop\PORTFOLIO\
 
 ---
 
-## 🛠️ Local Development Setup with XAMPP
+## 🛠️ Local Development Setup with LocalWP (Recommended)
 
-### Step 1: Start XAMPP Services
-1. Open the **XAMPP Control Panel** (`C:\xampp\xampp-control.exe`).
-2. Click **Start** for **Apache** and **MySQL**.
+Our primary development environment is **LocalWP** (Local by Flywheel). It provides isolated sandboxes with modern Nginx, PHP 8.2+, and MySQL 8.4+ without needing third-party stacks like XAMPP.
 
-### Step 2: Set Up WordPress Core
-If you haven't installed WordPress yet:
-1. Download WordPress from [wordpress.org/download](https://wordpress.org/download/).
-2. Extract the files into `C:\xampp\htdocs\portfolio`.
-3. Open your browser and navigate to `http://localhost/phpmyadmin`.
-4. Click **New** and create a database named `portfolio_db` (Collation: `utf8mb4_unicode_ci`).
+### Step 1: Install & Set Up LocalWP
+1. Download and install **LocalWP** from [localwp.com](https://localwp.com/).
+2. In LocalWP, click **+ (Create a new site)**:
+   * **Site name:** `Quadro Portfolio`
+   * **Environment:** Preferred (PHP 8.2.x, Nginx 1.26.x, MySQL 8.4.x)
+   * **WordPress Admin:** Set your preferred username, password, and email.
+3. In **Preferences > Advanced**:
+   * Set **Router Mode** to **`localhost`** (avoids Windows hosts permission issues and conflicts).
 
-### Step 3: Deploy the Theme
-Run **`deploy-to-xampp.bat`** or **`deploy-to-xampp.ps1`** inside this folder.
-* It automatically copies the complete theme into `C:\xampp\htdocs\portfolio\wp-content\themes\quadro-portfolio`.
+### Step 2: Deploy Theme to LocalWP
+Run **`deploy-to-localwp.bat`** (or **`deploy-to-localwp.ps1`**) from this directory.
+* It automatically deploys the complete theme into:
+  `%USERPROFILE%\Local Sites\quadro-portfolio\app\public\wp-content\themes\quadro-portfolio`
 
-### Step 4: Complete WordPress Installation
-1. Visit `http://localhost/portfolio` in your browser.
-2. Select your language and enter the database details:
-   * **Database Name:** `portfolio_db`
-   * **Username:** `root`
-   * **Password:** *(leave blank)*
-   * **Database Host:** `localhost`
-   * **Table Prefix:** `wp_`
-3. Complete the site title and create your admin account.
+### Step 3: Start Site & Activate Theme
+1. In LocalWP, click **Start site** (top-right green button).
+2. Open your browser and go to:
+   👉 **`http://localhost:10004/wp-admin`** *(or your site's assigned port)*
+3. Log in with your admin credentials.
+4. Navigate to **Appearance > Themes** and click **Activate** on **Quadro - Group Portfolio Theme**.
 
-### Step 5: Activate Theme & Seed Demo Data
-1. In the WordPress Admin dashboard, go to **Appearance > Themes**.
-2. Hover over **Quadro - Group Portfolio Theme** and click **Activate**.
-3. In the left admin sidebar, click **Portfolio Demo Setup**.
-4. Click the blue button: **"Seed Demo Portfolio Content Now"**.
-   * In 3 seconds, it generates all **4 team members**, **6 showcase projects**, **core pages**, and links the **navigation menu** automatically!
+### Step 4: One-Click Content Synchronization
+* The theme features an automatic seeder (`demo-data-seeder.php`) that runs on activation and synchronizes:
+  * All **4 Team Members** with updated roles (Data Analyst, Project Manager, Technical Writer, Programmer).
+  * All **6 Aligned Showcase Projects**.
+  * Core static pages (`Home`, `About Us`, `Our Team`, `Our Projects`, `Contact Us`).
+  * The primary header navigation menu.
+
+### Step 5: Database Management (Adminer)
+* In LocalWP, click the **Database** tab.
+* Click **Open Adminer** to view tables (`wp_posts`, `wp_postmeta`, `wp_options`, etc.), run SQL queries, and inspect raw records without needing phpMyAdmin.
+
+---
+
+## 🔄 Alternative Setup with XAMPP
+
+If running on XAMPP:
+1. Start **Apache** and **MySQL** in XAMPP Control Panel.
+2. Run **`deploy-to-xampp.bat`** to copy files into `C:\xampp\htdocs\portfolio\wp-content\themes\quadro-portfolio`.
+3. Open `http://localhost/portfolio/wp-admin` and activate the theme under **Appearance > Themes**.
 
 ---
 
@@ -175,7 +189,7 @@ Run **`deploy-to-xampp.bat`** or **`deploy-to-xampp.ps1`** inside this folder.
 1. Go to **Team Members > All Team Members** in WP Admin.
 2. Click on any member to edit their:
    * **Name & Biography** (Title and Content area)
-   * **Role / Position Title** (e.g. Lead Frontend Engineer)
+   * **Role / Position Title** (Data Analyst, Project Manager, Technical Writer, Programmer)
    * **Technical Skills** (Comma-separated list)
    * **Social Profiles** (GitHub, LinkedIn, Twitter/X, Portfolio, Direct Email)
    * **Profile Picture** (Featured Image)
@@ -186,11 +200,10 @@ Run **`deploy-to-xampp.bat`** or **`deploy-to-xampp.ps1`** inside this folder.
 3. In the **Project Specifications** box, specify:
    * **Technologies Used** (e.g. `PHP, MySQL, React, Tailwind`)
    * **Live Demo URL** and **GitHub Repository URL**
-   * **Category** (Frontend, Backend, UI/UX, Full-Stack)
+   * **Category** (Programming, Data Analysis, Project Management, Technical Writing, Cloud Computing)
    * **Lead Specialist** (Links the project to one of the 4 members)
 
 ---
 
 ## 📄 License
 This theme is open-source software licensed under the [GNU General Public License v2 or later](http://www.gnu.org/licenses/gpl-2.0.html).
-
