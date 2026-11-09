@@ -111,26 +111,26 @@ get_header();
     <div class="philosophy-grid">
         <div class="philosophy-item">
             <div class="philosophy-step"><?php _e('PHASE 01', 'quadro'); ?></div>
-            <h4><?php _e('Project Governance & Sprints', 'quadro'); ?></h4>
-            <p><?php _e('Led by Project Manager Ariel Caharian: sprint backlogs, agile velocity planning, milestone roadmapping, and cross-functional alignment.', 'quadro'); ?></p>
+            <h4><?php _e('Project Planning & Coordination', 'quadro'); ?></h4>
+            <p><?php _e('Led by Project Manager Ariel Caharian: organizing project tasks, scheduling group milestones, and ensuring team coordination.', 'quadro'); ?></p>
         </div>
 
         <div class="philosophy-item">
             <div class="philosophy-step"><?php _e('PHASE 02', 'quadro'); ?></div>
-            <h4><?php _e('Data Modeling & Analytics', 'quadro'); ?></h4>
-            <p><?php _e('Led by Data Analyst Niel Kenneth De jesus: relational schema design, SQL data normalization, telemetry analytics, and statistical modeling.', 'quadro'); ?></p>
+            <h4><?php _e('Data Management & Analytics', 'quadro'); ?></h4>
+            <p><?php _e('Led by Data Analyst Niel Kenneth De jesus: structuring database tables, writing SQL queries, and preparing project data reports.', 'quadro'); ?></p>
         </div>
 
         <div class="philosophy-item">
             <div class="philosophy-step"><?php _e('PHASE 03', 'quadro'); ?></div>
-            <h4><?php _e('Programming & Integration', 'quadro'); ?></h4>
-            <p><?php _e('Led by Programmer Mike Christopher Mansilao: object-oriented PHP architecture, secure MySQL queries, custom WordPress components, and responsive frontends.', 'quadro'); ?></p>
+            <h4><?php _e('Web Development & Coding', 'quadro'); ?></h4>
+            <p><?php _e('Led by Programmer Mike Christopher Mansilao: coding the custom WordPress theme, developing backend PHP features, and building responsive interfaces.', 'quadro'); ?></p>
         </div>
 
         <div class="philosophy-item">
             <div class="philosophy-step"><?php _e('PHASE 04', 'quadro'); ?></div>
             <h4><?php _e('Technical Documentation', 'quadro'); ?></h4>
-            <p><?php _e('Led by Technical Writer Lorence Mar Bigtasin: REST API endpoint specs, architecture manuals, SOP guidelines, and end-user documentation.', 'quadro'); ?></p>
+            <p><?php _e('Led by Technical Writer Lorence Mar Bigtasin: writing system documentation, creating user manuals, and preparing clear project reports.', 'quadro'); ?></p>
         </div>
     </div>
 </div>

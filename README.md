@@ -18,28 +18,32 @@ Developed and optimized for **LocalWP** (Local by Flywheel) development environm
 
 ---
 
-## 👥 The 4 Team Member Roles & Profiles
+## 👥 The 4 Team Member Profiles (4th-Year BSIT College Students)
 
-The theme natively accommodates the four distinct BSIT engineering disciplines:
+The portfolio showcases the contributions of four graduating BSIT students:
 
 1. **Niel Kenneth De jesus — Data Analyst**
-   * *Core Stack:* Data Analysis, Python, SQL, Statistics, Excel, Tableau, PowerBI
-   * *Specialization:* Quantitative telemetry analysis, statistical forecasting, database normalization, predictive data modeling, and interactive executive KPI dashboards.
+   * *Role & Status:* 4th-Year BSIT Student / Data Analyst
+   * *Core Stack:* Data Analysis, SQL, Python, Excel, Data Visualization
+   * *Contribution:* Focused on project data requirements, structuring SQL queries, and preparing clear visual reports to help the team make data-driven decisions.
    * *Direct Email:* `nielkenneth.dejesus@gmail.com`
 
 2. **Ariel Caharian — Project Manager**
-   * *Core Stack:* Agile/Scrum, Project Roadmapping, Resource Allocation, JIRA, Confluence, QA Leadership
-   * *Specialization:* Cross-functional sprint governance, milestone delivery tracking, velocity optimization, risk matrix auditing, and quality assurance benchmarks.
+   * *Role & Status:* 4th-Year BSIT Student / Project Manager
+   * *Core Stack:* Project Planning, Task Scheduling, Agile/Scrum, Team Coordination, Trello
+   * *Contribution:* Organized task schedules, tracked project milestones, and led daily group coordination to ensure quality deliverables were submitted on time.
    * *Direct Email:* `ariel.caharian@gmail.com`
 
 3. **Lorence Mar Bigtasin — Technical Writer**
-   * *Core Stack:* Technical Documentation, REST API Specifications, OpenAPI/Swagger, Markdown, System Architecture Writing, SOP Manuals
-   * *Specialization:* Comprehensive developer API references, software architecture blueprints, standard operating procedures (SOPs), and end-user onboarding manuals.
+   * *Role & Status:* 4th-Year BSIT Student / Technical Writer
+   * *Core Stack:* Technical Writing, System Documentation, User Guides, Markdown, Software Diagrams
+   * *Contribution:* Authored the complete technical documentation, system flowcharts, and user guides to make our project easy to understand for instructors and users.
    * *Direct Email:* `lorence.bigtasin@gmail.com`
 
-4. **Mike Christopher Mansilao — PROGRAMMER**
-   * *Core Stack:* PHP 8.x, JavaScript (ES6+), MySQL, WordPress Theme & Core APIs, Python, REST APIs
-   * *Specialization:* Custom WordPress theme engineering, object-oriented PHP backend logic, relational database normalization in MySQL, algorithm optimization, and dynamic web applications.
+4. **Mike Christopher Mansilao — Programmer**
+   * *Role & Status:* 4th-Year BSIT Student / Programmer
+   * *Core Stack:* PHP, JavaScript, MySQL, WordPress, HTML/CSS, Git
+   * *Contribution:* Led core web development by writing custom PHP functions, organizing MySQL database queries, and building responsive interactive components for the portfolio.
    * *Direct Email:* `occmansilaomikechristopher@gmail.com`
    * *GitHub Profile:* [occmansilaomikechristopher-byte](https://github.com/occmansilaomikechristopher-byte)
 

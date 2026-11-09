@@ -85,7 +85,7 @@ get_header();
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
                 <h3 class="pillar-title"><?php _e('Software Programming', 'quadro'); ?></h3>
-                <p><?php _e('Robust PHP backend logic, MySQL relational database management, clean OOP architecture, and dynamic WordPress web applications.', 'quadro'); ?></p>
+                <p><?php _e('Custom PHP backend logic, MySQL relational database management, clean code structure, and dynamic WordPress web applications.', 'quadro'); ?></p>
             </div>
 
             <!-- Pillar 2 -->
@@ -94,7 +94,7 @@ get_header();
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                 </div>
                 <h3 class="pillar-title"><?php _e('Data Analytics', 'quadro'); ?></h3>
-                <p><?php _e('Quantitative telemetry analysis, statistical reporting, SQL query optimization, and interactive data visualization dashboards.', 'quadro'); ?></p>
+                <p><?php _e('Dataset requirement analysis, SQL query structuring, data normalization, and visual summary reporting.', 'quadro'); ?></p>
             </div>
 
             <!-- Pillar 3 -->
@@ -103,7 +103,7 @@ get_header();
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
                 <h3 class="pillar-title"><?php _e('Project Management', 'quadro'); ?></h3>
-                <p><?php _e('Agile/Scrum roadmapping, cross-functional team leadership, milestone sprint planning, and quality assurance oversight.', 'quadro'); ?></p>
+                <p><?php _e('Milestone scheduling, task tracking, team coordination, and quality assurance for our group deliverables.', 'quadro'); ?></p>
             </div>
 
             <!-- Pillar 4 -->
@@ -112,7 +112,7 @@ get_header();
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                 </div>
                 <h3 class="pillar-title"><?php _e('Technical Writing', 'quadro'); ?></h3>
-                <p><?php _e('Exhaustive REST API specifications, system architecture documentation, standard operating procedures, and developer guides.', 'quadro'); ?></p>
+                <p><?php _e('Comprehensive system specifications, architecture flowcharts, standard operating procedures, and clear user guides.', 'quadro'); ?></p>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('QUADRO_VERSION', '1.0.0');
+define('QUADRO_VERSION', '1.1.0');
 
 /**
  * Theme Setup

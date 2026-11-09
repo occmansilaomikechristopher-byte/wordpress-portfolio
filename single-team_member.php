@@ -52,7 +52,7 @@ $contact_url = add_query_arg('recipient', $member_id, home_url('/contact-us'));
             <div class="member-profile-meta">
                 <span class="badge badge-cyan"><?php echo esc_html($role_title); ?></span>
                 <?php if (!empty($experience)) : ?>
-                    <span class="badge badge-indigo"><?php echo esc_html($experience); ?> <?php _e('Experience', 'quadro'); ?></span>
+                    <span class="badge badge-indigo"><?php echo esc_html($experience); ?></span>
                 <?php endif; ?>
                 <span class="status-pill">
                     <span class="status-dot"></span>
