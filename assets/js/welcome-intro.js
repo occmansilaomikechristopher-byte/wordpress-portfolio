@@ -68,7 +68,7 @@
             if ('speechSynthesis' in window) {
                 try {
                     window.speechSynthesis.cancel();
-                    const text = "Welcome to the Quadro.dev Portfolio.";
+                    const text = "Greetings! How are you today? Welcome to the Quadro.dev Portfolio.";
                     const utterance = new SpeechSynthesisUtterance(text);
                     utterance.rate = 0.90;
                     utterance.pitch = 0.85; // Deep authoritative tone
@@ -86,7 +86,7 @@
                     window.speechSynthesis.speak(utterance);
 
                     // Safety fallback if speech API doesn't fire onend
-                    audioTimeout = setTimeout(onEndCallback, 3800);
+                    audioTimeout = setTimeout(onEndCallback, 8000);
                     return;
                 } catch (err) {
                     console.warn('SpeechSynthesis error:', err);
@@ -124,10 +124,10 @@
                                 transitionIntoPortfolio();
                             }, { once: true });
 
-                            // Safety timeout in case audio file duration hangs
+                            // Safety timeout in case audio file duration hangs (audio is ~7.1s)
                             audioTimeout = setTimeout(function () {
                                 transitionIntoPortfolio();
-                            }, 4500);
+                            }, 8500);
 
                         }).catch(function (error) {
                             console.warn('HTML5 Audio playback caught, falling back to Web Speech API:', error);
@@ -136,7 +136,7 @@
                     } else {
                         // Older browser compatibility
                         audioElement.onended = transitionIntoPortfolio;
-                        audioTimeout = setTimeout(transitionIntoPortfolio, 4500);
+                        audioTimeout = setTimeout(transitionIntoPortfolio, 8500);
                     }
                 } else {
                     playSpeechSynthesisFallback(transitionIntoPortfolio);
