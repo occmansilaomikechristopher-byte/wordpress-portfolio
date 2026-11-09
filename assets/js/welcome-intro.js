@@ -70,13 +70,13 @@
                     window.speechSynthesis.cancel();
                     const text = "Welcome to the Quadro.dev Portfolio.";
                     const utterance = new SpeechSynthesisUtterance(text);
-                    utterance.rate = 0.95;
-                    utterance.pitch = 1.0;
+                    utterance.rate = 0.90;
+                    utterance.pitch = 0.85; // Deep authoritative tone
                     utterance.volume = 1.0;
 
-                    // Choose an English voice if available
+                    // Choose an English deep male voice if available
                     const voices = window.speechSynthesis.getVoices();
-                    const preferredVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Zira') || v.name.includes('Samantha') || v.name.includes('Google')));
+                    const preferredVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('David') || v.name.includes('Guy') || v.name.includes('George') || v.name.includes('James') || v.name.toLowerCase().includes('male')));
                     if (preferredVoice) {
                         utterance.voice = preferredVoice;
                     }
